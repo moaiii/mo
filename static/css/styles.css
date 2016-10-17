@@ -1,0 +1,262 @@
+h1, h2, h3, h4, h5, p, a {
+  font-family: 'Covered By Your Grace', cursive;
+  color: #FDE9D9; }
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #0B0E0A;
+  font-family: Impact, Charcoal, sans-serif;
+  margin: auto;
+  max-width: 700px;
+  z-index: 1; }
+
+#header {
+  align-items: baseline;
+  display: flex;
+  height: 150px;
+  justify-content: space-around;
+  width: 100%; }
+
+#canvasContainer {
+  width: 100%;
+  text-align: center; }
+
+#introVideo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  z-index: 9999;
+  width: 100%; }
+
+/**
+ *  Menu
+ */
+#menu_close,
+#menu_open {
+  height: 50px; }
+
+#twitter,
+#facebook,
+#google {
+  height: 50px; }
+
+.menu-switch,
+.volume-switch {
+  height: 50px; }
+
+.songLogo > img {
+  display: block;
+  margin: 10px auto; }
+
+/***
+ *  BUTTON STYLES
+ */
+.button-bar {
+  margin: 0 auto;
+  max-width: 680px;
+  display: none;
+  justify-content: center; }
+
+.button {
+  max-width: 300px;
+  margin: 10px; }
+  .button.begin {
+    display: block;
+    margin: 0 auto; }
+
+#buttonContainer_left,
+#buttonContainer_right {
+  float: left;
+  position: relative; }
+  #buttonContainer_left > h4,
+  #buttonContainer_right > h4 {
+    font-size: 30px;
+    position: absolute;
+    top: -20px;
+    left: 30px; }
+
+.buttonTextLeft {
+  position: relative;
+  top: 0px; }
+  .buttonTextLeft > h4 {
+    top: -14px;
+    left: 71px; }
+
+.buttonTextRight {
+  position: relative;
+  top: 0px; }
+  .buttonTextRight > h4 {
+    top: -14px;
+    left: 71px; }
+
+.windowMenu {
+  position: absolute;
+  display: table;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 680;
+  width: auto;
+  top: 150px;
+  padding: 0 73px;
+  z-index: 1000; }
+
+.video-invisible {
+  display: none; }
+
+.curtain {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900; }
+
+.p5canvas {
+  display: inline; }
+
+#menuToggle {
+  z-index: 900; }
+
+.logo > img {
+  height: 100px;
+  margin: 25px 38px 0 38px; }
+
+.songLogo > img {
+  display: block;
+  margin: 10px auto;
+  height: 101px; }
+
+.volumeSlider {
+  display: block; }
+
+.menuVisible {
+  position: absolute;
+  left: 30%;
+  top: 15px; }
+
+.addDrumButton {
+  background-color: #eeeeee;
+  border: 1px solid #000000;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  height: 50px;
+  margin: 20px auto;
+  width: 150px; }
+  .addDrumButton:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25); }
+
+/**
+ *  Nav burger bar
+ */
+.splashMenu {
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 0px;
+  left: 0;
+  right: 0;
+  padding: 150px 0;
+  position: absolute;
+  -webkit-transition: height 250ms cubic-bezier(0.905, 0.135, 0.09, 1);
+  /* older webkit */
+  -webkit-transition: height 250ms cubic-bezier(0.905, 0.135, 0.09, 1.31);
+  -moz-transition: height 250ms cubic-bezier(0.905, 0.135, 0.09, 1.31);
+  -o-transition: height 250ms cubic-bezier(0.905, 0.135, 0.09, 1.31);
+  transition: height 250ms cubic-bezier(0.905, 0.135, 0.09, 1.31);
+  /* custom */
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  z-index: 1; }
+
+.visible {
+  visibility: visible !important;
+  height: 100%; }
+
+.navContainer {
+  position: relative;
+  top: 400px;
+  height: 300px;
+  left: 500px;
+  padding: 50px;
+  border: 1px solid #0B0E0A;
+  width: 30%; }
+
+.navTitle {
+  margin: 43px;
+  color: #FDE9D9;
+  display: flex;
+  justify-content: center;
+  font-size: 40px; }
+
+.menuLinks {
+  color: #FDE9D9;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none; }
+
+.outOfDrums {
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 5px;
+  visibility: hidden; }
+
+.footer {
+  margin: 20px auto; }
+
+/**
+ *  Share Bar
+ */
+.shareIcon {
+  padding: 0 50px; }
+
+.shareFooter {
+  display: none;
+  justify-content: center;
+  position: relative; }
+
+.shareHeader {
+  padding: 0 50px;
+  display: none;
+  justify-content: space-around;
+  position: relative;
+  bottom: 75px; }
+
+.startOverCTA {
+  float: left;
+  display: block;
+  margin: 0 auto; }
+
+.downloadCTA {
+  display: block;
+  margin: 0 auto; }
+
+/**
+ *  Instruction menu
+ */
+#howtoplay {
+  z-index: 5000; }
+
+.windowMenu {
+  opacity: 0;
+  transform: all 1s ease-out; }
+
+/**
+ *  Utility Classes
+ */
+.opaque {
+  opacity: 1 !important; }
+
+.transparent {
+  opacity: 0 !important; }
+
+.hideIt {
+  display: none !important; }
+
+.showIt {
+  display: flex !important; }
+
+/*# sourceMappingURL=styles.css.map */

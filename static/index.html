@@ -1,0 +1,139 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MØ Music</title>
+
+  <!-- Libraries -->
+  <script src="js/libraries/p5.js"></script>
+  <script src="js/libraries/p5.dom.js"></script>
+  <script src="js/libraries/p5.sound.js"></script>
+  <script src="js/libraries/p5.play.js"></script>
+  <script src="js/libraries/jquery.js"></script>
+
+  <!-- Javascript functionality -->
+  <script src="js/variables.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/preload.js"></script>
+  <script src="js/setup.js"></script>
+  <script src="js/spectrum.js"></script>
+  <script src="js/sketch.js"></script>
+  <script src="js/drums.js"></script>
+  <script src="js/pinball.js"></script>
+
+  <!-- SASS Style sheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="splashMenu">
+    <a href="" onclick="instructionMenu();" class="menuLinks">HOW TO PLAY</a>
+    <a href="" onclick="instructionMenu();" class="menuLinks">DOWNLOAD "DRUM"</a>
+    <a href="" onclick="instructionMenu();" class="menuLinks">FOLLOW MØ</a>
+    <a href="" onclick="instructionMenu();" class="menuLinks">CREDITS</a>
+  </div>
+
+  <!-- <div class="windowMenu">
+    <h2 class="navTitle" id="#instruction1">CLICK AND DRAG THE DRUMS </br> AROUND THE FRAME</h2>
+    <h2 class="navTitle" id="#instruction2">TAP THE EDGE OF THE FRAME </br>
+      TO ADD A BALL AND START </br>
+      THE DRUM MACHINE
+    </h2>
+  </div> -->
+
+  <div id="instructMenu" class="windowMenu">
+    <h2 class="navTitle" id="#instruction1">CLICK AND DRAG THE DRUMS </br> AROUND THE FRAME</h2>
+    <h2 class="navTitle" id="#instruction2">TAP THE EDGE OF THE FRAME </br> TO ADD A BALL AND START </br> THE DRUM MACHINE </h2>
+  </div>
+
+  <div id="header">
+    <div id="menuToggle">
+      <img src="images/svg/menu_open.svg" class="button left menu-switch" alt="resume">
+    </div>
+    <div class="logo">
+      <img class="headerLogo" src="images/MO_logo_x2.png" alt="mo-logo">
+    </div>
+    <div id="volumeToggle">
+      <img src="images/svg/volume_on.svg" class="button right volume-switch" alt="resume">
+    </div>
+  </div>
+
+
+
+  <div id="canvasContainer">
+    <div id="sprayboard"></div>
+  </div>
+
+
+
+  <div class="footer">
+    <div class="footerLogo">
+      <div class="songLogo" id="drum">
+        <img src="images/assets/drum_logo_desktop.png" alt="">
+      </div>
+    </div> <!-- End footerLogo -->
+    <div class="button-bar">
+      <div>
+        <div id="buttonContainer_left">
+          <h4 class="adddrum buttonText left">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            ADD A DRUM
+          </h4>
+          <img src="images/buttons/CTA_desktop_idle_x2.png" id="pushbutton_left" class="button left" alt="resume">
+        </div>
+        <div id="buttonContainer_right">
+          <h4 class="play buttonText right">
+            <i class="fa fa-play" aria-hidden="true"></i>
+            PLAY
+          </h4>
+          <img src="images/buttons/CTA_desktop_idle_x2.png" id="pushbutton_right" class="button right" alt="share">
+        </div>
+      </div>
+    </div>
+    <div class="shareBar">
+      <div class="shareHeader">
+        <a href="" class="shareIcon tw">
+          <svg id="twitter" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.81 99"><defs><style>.cls-1{fill:#fee9d8;}</style></defs><title>social_tw</title><path class="cls-1" d="M58.5,99c46,0,71.11-38.08,71.11-71.11,0-1.08,0-2.16-.07-3.23A50.85,50.85,0,0,0,142,11.72a49.89,49.89,0,0,1-14.35,3.93,25.08,25.08,0,0,0,11-13.82A50.08,50.08,0,0,1,122.77,7.9,25,25,0,0,0,80.18,30.69,71,71,0,0,1,28.66,4.58,25,25,0,0,0,36.4,37.94a24.81,24.81,0,0,1-11.32-3.13c0,.1,0,.21,0,.32a25,25,0,0,0,20.05,24.5,25,25,0,0,1-11.29.43A25,25,0,0,0,57.19,77.42a50.15,50.15,0,0,1-31,10.7,50.88,50.88,0,0,1-6-.35A70.75,70.75,0,0,0,58.5,99" transform="translate(-20.19)"/></svg>
+        </a>
+        <a href="" class="shareIcon fb">
+          <svg id="facebook" data-name="Layer 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.84 97.9"><defs><style>.cls-1{fill:#fee9d8;}</style></defs><title>social_fb</title><path id="f" class="cls-1" d="M81.33,99V54.34h15l2.24-17.4H81.33V25.83c0-5,1.4-8.47,8.63-8.47h9.22V1.78A123.33,123.33,0,0,0,85.74,1.1c-13.29,0-22.38,8.11-22.38,23V36.94h-15v17.4h15V99Z" transform="translate(-48.32 -1.1)"/></svg>
+        </a>
+        <a href="" class="shareIcon gl">
+          <svg id="google" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.68 97.62"><defs><style>.cls-1{fill:#fee9d8;}</style></defs><title>social_g</title><path class="cls-1" d="M1,47.74C1.38,22.59,24.5.57,49.65,1.41c12-.56,23.37,4.68,32.6,12A173.76,173.76,0,0,1,69.87,26.27c-11.09-7.67-26.87-9.86-38-1C16,36.25,15.32,62.16,30.58,74c14.84,13.47,42.9,6.78,47-13.84-9.3-.14-18.62,0-27.92-.3,0-5.55,0-11.09,0-16.64,15.54,0,31.09-.07,46.66,0,.93,13.05-.79,26.94-8.81,37.73C75.35,98.05,51,103,32,95.72S-.64,68.29,1,47.74Z" transform="translate(-0.83 -1.37)"/><path class="cls-1" d="M126.62,29.19h13.87c0,4.64,0,9.3.09,13.94,4.64,0,9.3,0,13.94.09V57.08l-13.94.12q-.07,7-.09,13.94H126.6c0-4.64,0-9.28-.09-13.91l-13.94-.14V43.22q7-.07,13.94-.09Q126.54,36.13,126.62,29.19Z" transform="translate(-0.83 -1.37)"/></svg>        </a>
+      </div> <!-- End shareHeader -->
+      <div class="shareFooter">
+        <div class="startOverCTA">
+          <img src="images/buttons/CTA_startover_x2.png" alt="start over" id="startover">
+        </div> <!-- End startOver -->
+        <div class="downloadCTA">
+          <img src="images/buttons/CTA_download_x2.png" alt="download song" id="download">
+        </div><!-- End downloadLink -->
+      </div><!-- End shareFooter -->
+    </div> <!-- End shareBar -->
+  </div> <!-- End Footer -->
+
+<!--
+  <div class="curtain"></div>
+
+  <video id="introVideo">
+    <source src="video/intro.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video> -->
+
+  <script>
+    // var introVideo = document.getElementById("introVideo");
+    // introVideo.play();
+    // introVideo.onended = function() {
+    //   introVideo.className += 'video-invisible';
+    // }
+
+  </script>
+  <script src="js/drag.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

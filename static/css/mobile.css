@@ -1,0 +1,23 @@
+@media (max-width: 321px) {
+  .body {
+    background-color: white; }
+
+  .windowMenu {
+    padding: 0px;
+    overflow: hidden;
+    height: 400px; }
+
+  .header {
+    overflow: hidden;
+    align-items: center; }
+
+  .footer {
+    margin: 0px; }
+
+  .logo {
+    transform: scale(0.8); }
+
+  .navTitle {
+    font-size: 20px; } }
+
+/*# sourceMappingURL=mobile.css.map */
